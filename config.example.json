@@ -1,0 +1,22 @@
+{
+  "_help": "Edit this file, then press Ctrl+R in the hub to reload. {name} is replaced with the skill/agent name, {task} with what you typed. Empty startFolder = your home folder. Empty promptOMaticPath = no Prompt-o-Matic tab.",
+
+  "claudeCommand": "claude",
+  "startFolder": "",
+  "promptOMaticPath": "",
+
+  "skillTemplate": "/{name} ",
+  "agentTemplate": "Use the {name} subagent to ",
+  "subagentTemplate": "Spawn a {name} subagent (Agent tool) to do this: {task}",
+
+  "pinnedSkills": [],
+  "hiddenSkills": [],
+
+  "builtinAgents": ["general-purpose", "Explore", "Plan"],
+
+  "snippets": [
+    { "label": "Plan first", "text": "Make a plan first and show it to me before editing anything. " },
+    { "label": "Parallel agents", "text": "Split this into independent parts and run them as parallel subagents: " },
+    { "label": "Verify", "text": "When done, run it and prove it works before telling me it's finished. " }
+  ]
+}

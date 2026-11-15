@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Claude Hub</title>
+  <link rel="stylesheet" href="../node_modules/@xterm/xterm/css/xterm.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="side-head">
+      <span class="brand">Claude Hub</span>
+      <button class="icon-btn" id="configBtn" title="Edit config.json (then Ctrl+R)">Config</button>
+    </div>
+    <input id="search" type="search" placeholder="Filter skills & agents" spellcheck="false">
+
+    <button class="btn primary wide" id="subagentBtn">+ New subagent <kbd>Ctrl+Shift+A</kbd></button>
+
+    <div class="side-scroll">
+      <section><h3>Pinned skills</h3><div class="chips" id="pinned"></div></section>
+      <section><h3>Snippets</h3><div class="chips" id="snippets"></div></section>
+      <section><h3>Agents</h3><div class="chips" id="agents"></div></section>
+      <section><h3>All skills</h3><div class="chips" id="skills"></div></section>
+    </div>
+    <p class="hint">Click inserts into the active Claude tab. Shift+click sends it right away.</p>
+  </aside>
+
+  <main class="main">
+    <nav class="tabs" id="tabs">
+      <button class="tab add" id="newTab" title="New Claude tab (Ctrl+T)">+</button>
+    </nav>
+    <div class="panes" id="panes"></div>
+  </main>
+
+  <dialog id="subDlg">
+    <form method="dialog" class="sub-form">
+      <h2>New subagent</h2>
+      <label>Agent type <select id="subType"></select></label>
+      <label>Task <textarea id="subTask" rows="6" placeholder="What should the subagent do? Say what done looks like."></textarea></label>
+      <div class="row">
+        <button value="cancel" class="btn ghost">Cancel</button>
+        <button value="insert" class="btn">Insert</button>
+        <button value="send" class="btn primary">Send <kbd>Ctrl ↵</kbd></button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="../node_modules/@xterm/xterm/lib/xterm.js"></script>
+  <script src="../node_modules/@xterm/addon-fit/lib/addon-fit.js"></script>
+  <script src="visual.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

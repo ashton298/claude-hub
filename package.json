@@ -1,0 +1,19 @@
+{
+  "name": "claude-hub",
+  "version": "1.0.0",
+  "description": "Desktop hub: Claude Code terminal, skill/agent buttons, Prompt-o-Matic tab.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@lydell/node-pty": "^1.2.0-beta.18",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11"
+  }
+}
